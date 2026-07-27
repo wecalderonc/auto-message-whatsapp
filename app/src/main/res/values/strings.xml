@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WhatsApp Scheduler</string>
+    <string name="accessibility_service_description">
+        Allows this personal scheduler to open WhatsApp and tap Send for messages you scheduled on this device.
+        It only acts when a schedule is due and does not collect data for others.
+    </string>
+</resources>

@@ -5,7 +5,7 @@ import android.content.Context
 object PhoneNormalizer {
     /**
      * Local numbers without a country code are prefixed using [defaultCountryCallingCode].
-     * Example: Colombian `3007162262` + `57` becomes `573007162262`. Without that, WhatsApp may
+     * Example: Colombian `3105551234` + `57` becomes `573105551234`. Without that, WhatsApp may
      * misread the first digits as another country (e.g. `30…` → Greece).
      */
     fun toWhatsAppDigits(raw: String, defaultCountryCallingCode: String? = null): String? {

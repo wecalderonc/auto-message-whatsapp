@@ -32,20 +32,20 @@ class PhoneNormalizerTest {
     @Test
     fun prependsColombiaCodeForLocalMobile() {
         assertEquals(
-            "573007162262",
-            PhoneNormalizer.toWhatsAppDigits("3007162262", defaultCountryCallingCode = "57")
+            "573105551234",
+            PhoneNormalizer.toWhatsAppDigits("3105551234", defaultCountryCallingCode = "57")
         )
     }
 
     @Test
     fun doesNotDoublePrefixWhenAlreadyInternational() {
         assertEquals(
-            "573007162262",
-            PhoneNormalizer.toWhatsAppDigits("573007162262", defaultCountryCallingCode = "57")
+            "573105551234",
+            PhoneNormalizer.toWhatsAppDigits("573105551234", defaultCountryCallingCode = "57")
         )
         assertEquals(
-            "573007162262",
-            PhoneNormalizer.toWhatsAppDigits("+57 300 716 2262", defaultCountryCallingCode = "57")
+            "573105551234",
+            PhoneNormalizer.toWhatsAppDigits("+57 310 555 1234", defaultCountryCallingCode = "57")
         )
     }
 

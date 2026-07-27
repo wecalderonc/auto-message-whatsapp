@@ -522,7 +522,7 @@ private fun CreateScheduleDialog(
                         value = form.phone,
                         onValueChange = onPhoneChange,
                         label = { Text("Phone (local or +country)") },
-                        placeholder = { Text("3007162262 or 573007162262") },
+                        placeholder = { Text("3105551234 or 573105551234") },
                         supportingText = {
                             val normalized = PhoneNormalizer.toWhatsAppDigits(
                                 form.phone,

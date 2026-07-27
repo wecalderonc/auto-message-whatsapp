@@ -17,7 +17,7 @@ import java.util.UUID
 import kotlinx.coroutines.delay
 
 object SendCoordinator {
-    private const val UNLOCK_WAIT_MS = 3 * 60 * 1000L
+    private const val UNLOCK_WAIT_MS = 60 * 60 * 1000L
     private const val UNLOCK_POLL_MS = 1_500L
 
     @Volatile

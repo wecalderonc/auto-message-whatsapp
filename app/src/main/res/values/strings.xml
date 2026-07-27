@@ -3,6 +3,8 @@
     <string name="app_name">WhatsApp Scheduler</string>
     <string name="accessibility_service_description">
         Allows this personal scheduler to open WhatsApp and tap Send for messages you scheduled on this device.
-        It only acts when a schedule is due and does not collect data for others.
+        It is intended only for WhatsApp automation you start. Disable this service before using banking or other
+        high-security apps, because those apps often block devices with Accessibility enabled.
+        It does not collect data for others.
     </string>
 </resources>

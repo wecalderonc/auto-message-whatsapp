@@ -91,6 +91,7 @@ Silent send behind PIN/biometric lock is **not possible** with UI automation. Of
 - WhatsApp UI/resource IDs change; selectors may break after updates.
 - OEM battery savers can kill alarms/services.
 - Google Play [restricts Accessibility automation](https://support.google.com/googleplay/android-developer/answer/10964491); this app is personal/sideload only.
+- **Banking / secure apps:** many bank apps warn or refuse to open while *any* Accessibility service is enabled. Turn off Accessibility for WhatsApp Scheduler before using your bank, then re-enable it when you need scheduled sends. There is no reliable way to keep Accessibility on and still satisfy those bank checks.
 - Exact alarms: see [Android alarm guidance](https://developer.android.com/develop/background-work/services/alarms).
 
 ## License / use

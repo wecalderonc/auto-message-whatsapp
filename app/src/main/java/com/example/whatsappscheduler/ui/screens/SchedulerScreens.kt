@@ -193,6 +193,8 @@ private fun RiskDialog(onAccept: () -> Unit) {
                 "This app drives the WhatsApp UI with Accessibility. " +
                     "Unauthorized automated messaging can violate WhatsApp’s terms and risk account action. " +
                     "Group sends search by exact group name and may break when WhatsApp updates. " +
+                    "Banking and other secure apps often block or warn while any Accessibility service is on — " +
+                    "turn Accessibility off for this app before opening your bank, then turn it back on when you need scheduled sends. " +
                     "Use only on your own device with recipients you control."
             )
         },
@@ -279,6 +281,12 @@ private fun PermissionsCard(permissions: PermissionSnapshot) {
                 },
                 style = MaterialTheme.typography.bodySmall
             )
+            Text(
+                text = "Banking tip: disable Accessibility for this app before opening bank apps. " +
+                    "Banks often treat any Accessibility service as a risk, even when it is scoped to WhatsApp.",
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.error
+            )
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 if (!permissions.accessibilityEnabled) {
                     OutlinedButton(
@@ -286,6 +294,12 @@ private fun PermissionsCard(permissions: PermissionSnapshot) {
                             context.startActivity(Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS))
                         }
                     ) { Text("Accessibility") }
+                } else {
+                    OutlinedButton(
+                        onClick = {
+                            context.startActivity(Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS))
+                        }
+                    ) { Text("Disable for banking") }
                 }
                 if (!permissions.exactAlarmsAllowed && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
                     OutlinedButton(
